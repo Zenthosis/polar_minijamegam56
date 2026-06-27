@@ -8,6 +8,6 @@ public class CarrotCountUI : MonoBehaviour
 
     private void Update()
     {
-        text.text = farm.CurrentCarrotAmount.ToString();
+        text.text = farm.CurrentCarrotAmount.ToString("F2");
     }
 }

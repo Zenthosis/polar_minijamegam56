@@ -49,7 +49,7 @@ public class Farm : MonoBehaviour, IPointerClickHandler
         spawnPoint.x += Random.Range(- randomXRangeForPopups, + randomXRangeForPopups);
 
         NotifPopup popup = notifPrefabPool.Get();
-        popup.Init(notifPrefabPool, $"+ {amount}", spawnPoint);
+        popup.Init(notifPrefabPool, $"+ {amount:F1}", spawnPoint);
     }
 
     public void OnPointerClick(PointerEventData eventData)
