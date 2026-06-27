@@ -8,6 +8,6 @@ public class CarrotCountUI : MonoBehaviour
 
     private void Update()
     {
-        text.text = farm.CurrentCarrotAmount.ToString("F2");
+        text.text = farm.CurrentCarrotAmount.ToString("F2").TrimEnd('0').TrimEnd('.');
     }
 }
