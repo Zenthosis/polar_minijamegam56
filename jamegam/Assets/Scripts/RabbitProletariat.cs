@@ -68,7 +68,7 @@ public class RabbitProletariat : MonoBehaviour
 
     public void SwitchSides()
     {
-        GetComponentInChildren<SpriteRenderer>().color = Color.green;
+        //GetComponentInChildren<SpriteRenderer>().color = Color.green;
 
         onRabbitConverted?.Invoke(this);
         rabbit.SwitchSide();
