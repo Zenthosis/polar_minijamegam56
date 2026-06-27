@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ce547df2dfb0149b7514ec0d65ba92, type: 3}
   m_Name: BaseSpawnerConfig
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerConfigSO
-  initialBudget: 2
+  initialBudget: 1
   rabbitOptionsAndCost:
     _serializedList:
     - Key: {fileID: 527409583061272801, guid: aaa7c1b8bb940ad48bb46a0173558f17, type: 3}
