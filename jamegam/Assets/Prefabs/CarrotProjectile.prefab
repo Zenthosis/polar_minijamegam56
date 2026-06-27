@@ -250,7 +250,7 @@ MonoBehaviour:
       Data2: 1090734609
       Data3: -1680488798
       Data4: 1936110754
-    Path: event:/shoot
+    Path: event:/Shoot_Carrots
   Event: 
   EventPlayTrigger: 11
   EventStopTrigger: 0

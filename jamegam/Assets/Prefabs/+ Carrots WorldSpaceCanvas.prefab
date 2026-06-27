@@ -365,7 +365,7 @@ MonoBehaviour:
       Data2: 1279740545
       Data3: -536341880
       Data4: 1053698325
-    Path: event:/get money
+    Path: event:/Get_Carrots
   Event: 
   EventPlayTrigger: 11
   EventStopTrigger: 0
