@@ -193,6 +193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3285211646719186887}
   - component: {fileID: 6176842387616691496}
+  - component: {fileID: -3768977805805578046}
   m_Layer: 0
   m_Name: CarrotProjectile
   m_TagString: Untagged
@@ -230,3 +231,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CarrotProjectile
   rotationSpeed: 20
   rangeForContactSquared: 1
+--- !u!114 &-3768977805805578046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8173756914511225788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1158419637
+      Data2: 1090734609
+      Data3: -1680488798
+      Data4: 1936110754
+    Path: event:/shoot
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
