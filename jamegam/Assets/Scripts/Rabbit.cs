@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public enum RabbitState { Idle, Moving, Attacking }
+public enum RabbitState { Idle, Moving, Attacking, Converted }
 
 public class Rabbit : MonoBehaviour
 {
@@ -10,11 +10,21 @@ public class Rabbit : MonoBehaviour
     public RabbitData Data => rabbitSO.rabbitData;
     public RabbitState CurrentState { get; private set; }
     public event Action OnSwitchSide;
+    Animator myAnimator;
+
+    private void Start()
+    {
+        myAnimator = GetComponent<Animator>();
+    }
 
     public void ChangeState(RabbitState newState)
     {
         if (CurrentState == newState) return;
         CurrentState = newState;
+
+        myAnimator.SetBool("IsAttacking", CurrentState == RabbitState.Attacking);
+        myAnimator.SetBool("IsAttacking", CurrentState == RabbitState.Idle);
+        myAnimator.SetBool("IsConverted", CurrentState == RabbitState.Converted);
     }
 
     public void MoveInDirection(Vector2 direction)
