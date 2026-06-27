@@ -3,28 +3,26 @@ using UnityEngine;
 
 public class RabbitSubject : MonoBehaviour
 {
-    [Header("Movement")]
-    [SerializeField] private Transform targetArea;
-    [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private float arrivalThreshold = 0.2f;
-
     [Header("Patrol")]
-    [SerializeField] private float patrolRange = 3f;    // +/- range around targetArea
+    [SerializeField] private Transform targetArea;
+    [SerializeField] private float patrolRange = 3f;
     [SerializeField] private float minIdleTime = 1f;
     [SerializeField] private float maxIdleTime = 3f;
+    [SerializeField] private float arrivalThreshold = 0.2f;
 
-    private Collider2D[] _colliders;
-    private bool _arrivedAtTarget = false;
-    private float _patrolDestinationX;
+    private Rabbit rabbit;
+    private Collider2D[] colliders;
+
+    private void Awake()
+    {
+        rabbit = GetComponent<Rabbit>();
+    }
 
     private void OnEnable()
     {
-        // Disable all colliders so the converted rabbit doesn't interfere
-        _colliders = GetComponentsInChildren<Collider2D>();
-        foreach (var col in _colliders)
+        colliders = GetComponentsInChildren<Collider2D>();
+        foreach (var col in colliders)
             col.enabled = false;
-
-        _arrivedAtTarget = false;
 
         StartCoroutine(MoveToTargetThenPatrol());
     }
@@ -39,42 +37,32 @@ public class RabbitSubject : MonoBehaviour
         // Phase 1: Move to target area
         if (targetArea != null)
         {
+            rabbit.ChangeState(RabbitState.Moving);
+
             while (Vector2.Distance(transform.position, targetArea.position) > arrivalThreshold)
             {
-                transform.position = Vector2.MoveTowards(
-                    transform.position,
-                    targetArea.position,
-                    moveSpeed * Time.deltaTime
-                );
+                rabbit.MoveInDirection((targetArea.position - transform.position).normalized);
                 yield return null;
             }
         }
 
-        _arrivedAtTarget = true;
-
-        // Phase 2: Patrol randomly around the target area
+        // Phase 2: Patrol
         while (true)
         {
             float baseX = targetArea != null ? targetArea.position.x : transform.position.x;
+            float destX = baseX + Random.Range(-patrolRange, patrolRange);
+            Vector2 destination = new Vector2(destX, transform.position.y);
 
-            // Pick a random destination within patrolRange of the base position
-            _patrolDestinationX = baseX + Random.Range(-patrolRange, patrolRange);
-            Vector2 destination = new Vector2(_patrolDestinationX, transform.position.y);
+            rabbit.ChangeState(RabbitState.Moving);
 
-            // Walk to destination
-            while (Mathf.Abs(transform.position.x - _patrolDestinationX) > arrivalThreshold)
+            while (Mathf.Abs(transform.position.x - destX) > arrivalThreshold)
             {
-                transform.position = Vector2.MoveTowards(
-                    transform.position,
-                    destination,
-                    moveSpeed * Time.deltaTime
-                );
+                rabbit.MoveInDirection((destination - (Vector2)transform.position).normalized);
                 yield return null;
             }
 
-            // Idle before next patrol
-            float idleTime = Random.Range(minIdleTime, maxIdleTime);
-            yield return new WaitForSeconds(idleTime);
+            rabbit.ChangeState(RabbitState.Idle);
+            yield return new WaitForSeconds(Random.Range(minIdleTime, maxIdleTime));
         }
     }
 }

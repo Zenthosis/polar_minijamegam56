@@ -3,80 +3,77 @@ using UnityEngine.Events;
 
 public class RabbitProletariat : MonoBehaviour
 {
-    [SerializeField] private RabbitSO rabbitSO;
-    [SerializeField] private float wallAttackableRange;
+    [Header("Combat")]
+    [SerializeField] private float wallAttackRange = 1.5f;
+
+    [Header("Events")]
     public UnityEvent<RabbitProletariat> onRabbitConverted;
 
-    private float _currentHealth;
-    private RabbitSubject _rabbitSubject;
-    private Wall wall;
+    public float currentHealth { get; private set; }
+    public float healthPercent => currentHealth / rabbit.Data.maxHealth;
 
-    //AttackTimer
+    private Rabbit rabbit;
+    private RabbitSubject rabbitSubject;
+    private Wall wall;
     private float lastAttackTime;
-    private float secondsInBetweenAttacks;
+    private float attackInterval;
 
     private void Awake()
     {
-        _rabbitSubject = GetComponent<RabbitSubject>();
+        rabbit = GetComponent<Rabbit>();
+        rabbitSubject = GetComponent<RabbitSubject>();
 
-        if (_rabbitSubject != null)
-            _rabbitSubject.enabled = false;
+        if (rabbitSubject != null)
+            rabbitSubject.enabled = false;
 
-        _currentHealth = rabbitSO.rabbitData.maxHealth;
+        currentHealth = rabbit.Data.maxHealth;
+        attackInterval = 1f / rabbit.Data.attacksPerSecond;
         wall = FindAnyObjectByType<Wall>();
-        secondsInBetweenAttacks = rabbitSO.rabbitData.attacksPerSecond / 1f;
     }
 
     private void Update()
     {
-        while (Vector3.Distance(transform.position, wall.transform.position) >= wallAttackableRange)
+        if (wall == null) return;
+
+        float distanceToWall = Vector2.Distance(transform.position, wall.transform.position);
+
+        if (distanceToWall > wallAttackRange)
         {
-            MoveRight();
+            rabbit.ChangeState(RabbitState.Moving);
+            rabbit.MoveInDirection(Vector2.right);
             return;
         }
 
-        //We've hit the wall. time to do damage.
-        if(Time.time >= lastAttackTime + secondsInBetweenAttacks)
+        if (Time.time >= lastAttackTime + attackInterval)
         {
-            wall.TakeDamage(rabbitSO.rabbitData.damage);
+            rabbit.ChangeState(RabbitState.Attacking);
+            wall.TakeDamage(rabbit.Data.damage);
             lastAttackTime = Time.time;
         }
-    }
-
-    private void MoveRight()
-    {
-        transform.position += transform.right * rabbitSO.rabbitData.moveSpeed * Time.deltaTime;
-    }
-
-    private void TakeDamage(float damageAmount)
-    {
-        _currentHealth -= damageAmount;
-        _currentHealth = Mathf.Clamp(_currentHealth, 0f, rabbitSO.rabbitData.maxHealth);
-
-        float healthPercent = _currentHealth / rabbitSO.rabbitData.maxHealth;
-
-        if (_currentHealth <= 0f)
+        else
         {
-            Debug.Log($"[RabbitProletariat] {rabbitSO.rabbitData.rabbitName} has been defeated.");
-            SwitchSides();
+            rabbit.ChangeState(RabbitState.Idle);
         }
     }
 
-    public void FeedCarrot(float damageAmount)
+    public void FeedCarrot(float amount)
     {
-        TakeDamage(damageAmount);
+        currentHealth -= amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0f, rabbit.Data.maxHealth);
+
+        if (currentHealth <= 0f)
+            SwitchSides();
     }
 
     public void SwitchSides()
     {
-        GetComponentInChildren<SpriteRenderer>().color = Color.red; //temporary visuals.
-        Debug.Log($"[RabbitProletariat] {rabbitSO.rabbitData.rabbitName} has switched sides!");
+        GetComponentInChildren<SpriteRenderer>().color = Color.green;
 
         onRabbitConverted?.Invoke(this);
 
-        if (_rabbitSubject != null)
-            _rabbitSubject.enabled = true;
+        if (rabbitSubject != null)
+            rabbitSubject.enabled = true;
 
-        this.enabled = false;
+        enabled = false;
     }
 }
