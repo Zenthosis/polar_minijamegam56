@@ -8,7 +8,6 @@ public class ManualCarrotShooter : MonoBehaviour
     [Header("Detection")]
     [SerializeField] private float detectionRadius = 8f;
     [SerializeField] private LayerMask rabbitLayer;
-
     private void Start()
     {
         _carrotShooter = GetComponent<CarrotShooter>();

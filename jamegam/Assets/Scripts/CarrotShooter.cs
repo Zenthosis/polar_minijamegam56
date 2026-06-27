@@ -15,8 +15,24 @@ public class CarrotShooter : MonoBehaviour
     [Header("Carrot Stats")]
     [SerializeField] private CarrotDetails carrotDetails = new CarrotDetails { speed = 10f, damage = 20f };
 
+    Farm farm;
+
+    private void Start()
+    {
+        farm = FindAnyObjectByType<Farm>();
+    }
+
     public void ShootCarrot(RabbitProletariat target)
     {
+        if (!farm.HasEnoughCarrots(1))
+        {
+            farm.ReduceCarrots(1);
+        }
+        else
+        {
+            return;
+        }
+        
         if (carrotPrefab == null)
         {
             Debug.LogWarning("[CarrotShooter] No carrot prefab assigned!");

@@ -54,11 +54,11 @@ public class RabbitProletariat : MonoBehaviour
         _currentHealth = Mathf.Clamp(_currentHealth, 0f, rabbitSO.rabbitData.maxHealth);
 
         float healthPercent = _currentHealth / rabbitSO.rabbitData.maxHealth;
-        Debug.Log($"[RabbitProletariat] {rabbitSO.rabbitData.rabbitName} took {damageAmount} damage. HP: {_currentHealth:F1} ({healthPercent * 100:F0}%)");
 
         if (_currentHealth <= 0f)
         {
             Debug.Log($"[RabbitProletariat] {rabbitSO.rabbitData.rabbitName} has been defeated.");
+            SwitchSides();
         }
     }
 
@@ -69,6 +69,7 @@ public class RabbitProletariat : MonoBehaviour
 
     public void SwitchSides()
     {
+        GetComponentInChildren<SpriteRenderer>().color = Color.red; //temporary visuals.
         Debug.Log($"[RabbitProletariat] {rabbitSO.rabbitData.rabbitName} has switched sides!");
 
         onRabbitConverted?.Invoke(this);
@@ -78,7 +79,4 @@ public class RabbitProletariat : MonoBehaviour
 
         this.enabled = false;
     }
-
-    // Expose rabbit data for external systems (e.g. CarrotShooter targeting)
-    public RabbitData GetRabbitData() => rabbitSO.rabbitData;
 }
