@@ -1,10 +1,14 @@
 using DG.Tweening;
+using System;
 using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private SpriteRenderer visuals;
+
+    public event Action OnWallBroken;
+
     public float MaxHealth => maxHealth;
     public float currentHealth { get; private set; }
     private void Awake()
@@ -16,6 +20,12 @@ public class Wall : MonoBehaviour
     {
         currentHealth -= damage;
         TakeHitVisuals();
+        print($"Took {damage} damage!");
+
+        if(currentHealth <= 0)
+        {
+            OnWallBroken?.Invoke();
+        }
     }
 
     private void TakeHitVisuals()
