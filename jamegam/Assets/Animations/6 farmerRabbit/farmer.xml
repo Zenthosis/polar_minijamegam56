@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="farmer.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="farmer_farming0000" x="2" y="2" width="115" height="112" frameX="-3" frameY="0" frameWidth="120" frameHeight="121"/>
+	<SubTexture name="farmer_farming0001" x="119" y="2" width="114" height="112" frameX="-3" frameY="0" frameWidth="120" frameHeight="121"/>
+	<SubTexture name="farmer_farming0002" x="119" y="2" width="114" height="112" frameX="-3" frameY="0" frameWidth="120" frameHeight="121"/>
+	<SubTexture name="farmer_farming0003" x="119" y="2" width="114" height="112" frameX="-3" frameY="0" frameWidth="120" frameHeight="121"/>
+	<SubTexture name="farmer_farming0004" x="2" y="116" width="119" height="120" frameX="0" frameY="-1" frameWidth="120" frameHeight="121"/>
+	<SubTexture name="farmer_farming0005" x="123" y="116" width="120" height="120" frameX="0" frameY="-1" frameWidth="120" frameHeight="121"/>
+	<SubTexture name="farmer_farming0006" x="123" y="116" width="120" height="120" frameX="0" frameY="-1" frameWidth="120" frameHeight="121"/>
+	<SubTexture name="farmer_farming0007" x="123" y="116" width="120" height="120" frameX="0" frameY="-1" frameWidth="120" frameHeight="121"/>
+</TextureAtlas>

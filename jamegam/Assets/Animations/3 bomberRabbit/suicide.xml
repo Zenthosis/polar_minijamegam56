@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="suicide.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="suicide_attack0000" x="2" y="2" width="67" height="53" frameX="-79" frameY="-64" frameWidth="248" frameHeight="132"/>
+	<SubTexture name="suicide_attack0001" x="71" y="2" width="185" height="84" frameX="-30" frameY="-36" frameWidth="248" frameHeight="132"/>
+	<SubTexture name="suicide_attack0002" x="258" y="2" width="235" height="100" frameX="-7" frameY="-26" frameWidth="248" frameHeight="132"/>
+	<SubTexture name="suicide_attack0003" x="495" y="2" width="248" height="102" frameX="0" frameY="-23" frameWidth="248" frameHeight="132"/>
+	<SubTexture name="suicide_attack0004" x="745" y="2" width="157" height="111" frameX="-48" frameY="-16" frameWidth="248" frameHeight="132"/>
+	<SubTexture name="suicide_attack0005" x="2" y="115" width="166" height="124" frameX="-43" frameY="-7" frameWidth="248" frameHeight="132"/>
+	<SubTexture name="suicide_attack0006" x="170" y="115" width="180" height="132" frameX="-38" frameY="0" frameWidth="248" frameHeight="132"/>
+	<SubTexture name="suicide_attack0007" x="352" y="115" width="188" height="115" frameX="-33" frameY="-11" frameWidth="248" frameHeight="132"/>
+	<SubTexture name="suicide_attack0008" x="542" y="115" width="0" height="0" frameX="-109" frameY="-100" frameWidth="248" frameHeight="132"/>
+	<SubTexture name="suicide_walk0000" x="544" y="115" width="133" height="99" frameX="0" frameY="-15" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0001" x="679" y="115" width="122" height="108" frameX="-6" frameY="-6" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0002" x="803" y="115" width="126" height="104" frameX="-4" frameY="-10" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0003" x="803" y="115" width="126" height="104" frameX="-4" frameY="-10" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0004" x="2" y="249" width="122" height="117" frameX="-3" frameY="-10" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0005" x="126" y="249" width="111" height="128" frameX="-8" frameY="0" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0006" x="239" y="249" width="117" height="124" frameX="-5" frameY="-4" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0007" x="239" y="249" width="117" height="124" frameX="-5" frameY="-4" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0008" x="358" y="249" width="104" height="125" frameX="-28" frameY="-8" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0009" x="464" y="249" width="95" height="132" frameX="-31" frameY="-2" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0010" x="561" y="249" width="101" height="129" frameX="-29" frameY="-4" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0011" x="561" y="249" width="101" height="129" frameX="-29" frameY="-4" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0012" x="2" y="249" width="122" height="117" frameX="-3" frameY="-10" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0013" x="126" y="249" width="111" height="128" frameX="-8" frameY="0" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0014" x="239" y="249" width="117" height="124" frameX="-5" frameY="-4" frameWidth="133" frameHeight="134"/>
+	<SubTexture name="suicide_walk0015" x="239" y="249" width="117" height="124" frameX="-5" frameY="-4" frameWidth="133" frameHeight="134"/>
+</TextureAtlas>

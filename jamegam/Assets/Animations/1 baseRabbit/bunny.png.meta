@@ -1,0 +1,531 @@
+fileFormatVersion: 2
+guid: 9e61034f02a1c3345952c97556f7ebdf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1185625210376227553
+    second: bunny_0
+  - first:
+      213: -7475530327114993743
+    second: bunny_1
+  - first:
+      213: 6045432587833367063
+    second: bunny_2
+  - first:
+      213: -1622973192143475964
+    second: bunny_3
+  - first:
+      213: -3116133614903261887
+    second: bunny_4
+  - first:
+      213: -4843668636705468930
+    second: bunny_5
+  - first:
+      213: 7885037658311394380
+    second: bunny_6
+  - first:
+      213: -4960583535161280744
+    second: bunny_7
+  - first:
+      213: 4582492483355213320
+    second: bunny_8
+  - first:
+      213: 1649562074661119048
+    second: bunny_9
+  - first:
+      213: -424079905133391801
+    second: bunny_10
+  - first:
+      213: 1863773138403331116
+    second: bunny_11
+  - first:
+      213: -2604519653876355528
+    second: bunny_12
+  - first:
+      213: -4501062342539024998
+    second: bunny_13
+  - first:
+      213: -1549948050510831163
+    second: bunny_14
+  - first:
+      213: -1138904945343299443
+    second: bunny_15
+  - first:
+      213: -7520255248010410206
+    second: bunny_16
+  - first:
+      213: -4843508665022356624
+    second: bunny_17
+  - first:
+      213: -62959978282926113
+    second: bunny_18
+  - first:
+      213: 2110923456185120899
+    second: bunny_attack0000
+  - first:
+      213: -6216589955900682972
+    second: bunny_attack0001
+  - first:
+      213: 2383465793496518171
+    second: bunny_attack0002
+  - first:
+      213: -2872875843614880559
+    second: bunny_attack0003
+  - first:
+      213: -8529617228885277627
+    second: bunny_walk0000
+  - first:
+      213: -7769888295632132373
+    second: bunny_walk0001
+  - first:
+      213: -4669513688825915595
+    second: bunny_walk0002
+  - first:
+      213: -6857970706088344069
+    second: bunny_walk0003
+  - first:
+      213: -2227483136240527258
+    second: bunny_walk0004
+  - first:
+      213: 4920719482167242508
+    second: bunny_walk0005
+  - first:
+      213: -3055428510063048422
+    second: bunny_walk0006
+  - first:
+      213: -6545959649819593979
+    second: bunny_walk0007
+  - first:
+      213: 4881788726981117653
+    second: bunny_walk0008
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bunny_attack0000
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 398
+        width: 161
+        height: 112
+      alignment: 9
+      pivot: {x: -0.024844721, y: 1.0357143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38834f103b18b4d10800000000000000
+      internalID: 2110923456185120899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_attack0001
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 396
+        width: 171
+        height: 114
+      alignment: 9
+      pivot: {x: 0, y: 1.0087719}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d474c3f5c3ab9a0800000000000000
+      internalID: -6216589955900682972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_attack0002
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 395
+        width: 169
+        height: 115
+      alignment: 9
+      pivot: {x: -0.00591716, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e87a3d285c31120800000000000000
+      internalID: 2383465793496518171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_attack0003
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 279
+        width: 92
+        height: 114
+      alignment: 9
+      pivot: {x: -0.010869565, y: 1.0087719}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dcc88134ae7128d0800000000000000
+      internalID: -2872875843614880559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_walk0000
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 289
+        width: 84
+        height: 104
+      alignment: 9
+      pivot: {x: 0, y: 1.0096154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544cd3a7256b0a980800000000000000
+      internalID: -8529617228885277627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_walk0001
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 289
+        width: 82
+        height: 104
+      alignment: 9
+      pivot: {x: -0.024390243, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be6a16203cfcb2490800000000000000
+      internalID: -7769888295632132373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_walk0002
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 306
+        width: 94
+        height: 87
+      alignment: 9
+      pivot: {x: 0, y: 1.1494253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53715b74a0e823fb0800000000000000
+      internalID: -4669513688825915595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_walk0003
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 303
+        width: 84
+        height: 90
+      alignment: 9
+      pivot: {x: -0.035714287, y: 1.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5c1975af793d0a0800000000000000
+      internalID: -6857970706088344069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_walk0004
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 183
+        width: 83
+        height: 94
+      alignment: 9
+      pivot: {x: -0.04819277, y: 1.0425532}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668d539a3e36611e0800000000000000
+      internalID: -2227483136240527258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_walk0005
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 181
+        width: 79
+        height: 96
+      alignment: 9
+      pivot: {x: -0.101265825, y: 1.0208334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f2ce54c48e94440800000000000000
+      internalID: 4920719482167242508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_walk0006
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 182
+        width: 82
+        height: 95
+      alignment: 9
+      pivot: {x: -0.06097561, y: 1.0315789}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a19471d55ffe895d0800000000000000
+      internalID: -3055428510063048422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_walk0007
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 184
+        width: 81
+        height: 93
+      alignment: 9
+      pivot: {x: -0.061728396, y: 1.0537634}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 503767661641825a0800000000000000
+      internalID: -6545959649819593979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bunny_walk0008
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 175
+        width: 78
+        height: 102
+      alignment: 9
+      pivot: {x: -0.025641026, y: 1.0588236}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6473c7bf89fb340800000000000000
+      internalID: 4881788726981117653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bunny_0: 1185625210376227553
+      bunny_1: -7475530327114993743
+      bunny_10: -424079905133391801
+      bunny_11: 1863773138403331116
+      bunny_12: -2604519653876355528
+      bunny_13: -4501062342539024998
+      bunny_14: -1549948050510831163
+      bunny_15: -1138904945343299443
+      bunny_16: -7520255248010410206
+      bunny_17: -4843508665022356624
+      bunny_18: -62959978282926113
+      bunny_2: 6045432587833367063
+      bunny_3: -1622973192143475964
+      bunny_4: -3116133614903261887
+      bunny_5: -4843668636705468930
+      bunny_6: 7885037658311394380
+      bunny_7: -4960583535161280744
+      bunny_8: 4582492483355213320
+      bunny_9: 1649562074661119048
+      bunny_attack0000: 2110923456185120899
+      bunny_attack0001: -6216589955900682972
+      bunny_attack0002: 2383465793496518171
+      bunny_attack0003: -2872875843614880559
+      bunny_walk0000: -8529617228885277627
+      bunny_walk0001: -7769888295632132373
+      bunny_walk0002: -4669513688825915595
+      bunny_walk0003: -6857970706088344069
+      bunny_walk0004: -2227483136240527258
+      bunny_walk0005: 4920719482167242508
+      bunny_walk0006: -3055428510063048422
+      bunny_walk0007: -6545959649819593979
+      bunny_walk0008: 4881788726981117653
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

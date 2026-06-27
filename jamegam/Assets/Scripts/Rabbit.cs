@@ -31,7 +31,7 @@ public class Rabbit : MonoBehaviour
         if (CurrentState != RabbitState.Converted)
         {
             myAnimator.SetBool("IsAttacking", CurrentState == RabbitState.Attacking);
-            //myAnimator.SetBool("IsAttacking", CurrentState == RabbitState.Idle);
+            myAnimator.SetBool("IsAttacking", CurrentState == RabbitState.Idle);
         }
         else 
         {
