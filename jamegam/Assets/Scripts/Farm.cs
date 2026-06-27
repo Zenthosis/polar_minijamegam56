@@ -39,6 +39,7 @@ public class Farm : MonoBehaviour, IPointerClickHandler
 
     public void FarmCarrots(float amount)
     {
+        print("Carrots!");
         carrotUnits += Mathf.RoundToInt(amount * 10f);
         SpawnPopUp(amount);
     }

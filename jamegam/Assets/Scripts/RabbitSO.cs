@@ -4,13 +4,18 @@ using UnityEngine;
 public struct RabbitData
 {
     public string rabbitName;
+
+    [Header("Proletariat")]
     public float maxHealth;
     public float damage;
     public float attacksPerSecond;
     public float moveSpeed;
+
+    [Header("Subject")]
     public float patrolRange;
     public float idleTimeBetweenPatrols;
-    public float conversionThreshold; // health % at which rabbit can be converted
+    public float carrotGainPerYield;
+    public float yieldIntervals;
 }
 
 [CreateAssetMenu(fileName = "NewRabbitData", menuName = "Rabbits/RabbitSO")]

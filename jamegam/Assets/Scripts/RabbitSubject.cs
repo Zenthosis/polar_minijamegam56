@@ -13,6 +13,7 @@ public class RabbitSubject : MonoBehaviour
     private Rabbit rabbit;
     private Collider2D[] colliders;
 
+    private Farm farm;
     private void Awake()
     {
         rabbit = GetComponent<Rabbit>();
@@ -20,6 +21,8 @@ public class RabbitSubject : MonoBehaviour
 
     private void OnEnable()
     {
+        farm = FindAnyObjectByType<Farm>();
+
         colliders = GetComponentsInChildren<Collider2D>();
         foreach (var col in colliders)
             col.enabled = false;
@@ -46,6 +49,8 @@ public class RabbitSubject : MonoBehaviour
             }
         }
 
+        StartCoroutine(AutoFarm());
+
         // Phase 2: Patrol
         while (true)
         {
@@ -63,6 +68,15 @@ public class RabbitSubject : MonoBehaviour
 
             rabbit.ChangeState(RabbitState.Idle);
             yield return new WaitForSeconds(Random.Range(minIdleTime, maxIdleTime));
+        }
+    }
+
+    private IEnumerator AutoFarm()
+    {
+        while(true)
+        {
+            farm.FarmCarrots(rabbit.Data.carrotGainPerYield);
+            yield return new WaitForSeconds(rabbit.Data.yieldIntervals);
         }
     }
 }

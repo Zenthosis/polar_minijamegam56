@@ -2555,7 +2555,7 @@ PrefabInstance:
     - target: {fileID: 9007670408972264349, guid: aaa7c1b8bb940ad48bb46a0173558f17, type: 3}
       propertyPath: rabbitSO
       value: 
-      objectReference: {fileID: 11400000, guid: 1acc53ad5da710b42b9cb72894fb22db, type: 2}
+      objectReference: {fileID: 11400000, guid: 081b5208fc847354e8cdef2157a23879, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

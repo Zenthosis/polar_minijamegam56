@@ -20,4 +20,5 @@ MonoBehaviour:
     moveSpeed: 1
     patrolRange: 3
     idleTimeBetweenPatrols: 0.2
-    conversionThreshold: 1
+    carrotGainPerYield: 0.2
+    yieldIntervals: 0.5
