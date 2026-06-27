@@ -826,6 +826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Farm
   clickAmount: 0.1
   notifPrefab: {fileID: 9124702036833296939, guid: 956ea1ab62a142f40b201f1e0fd580a9, type: 3}
+  randomXRangeForPopups: 1.58
 --- !u!61 &1657453829
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1188,29 +1189,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 527409583061272801, guid: aaa7c1b8bb940ad48bb46a0173558f17, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 8883746073681797378}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aaa7c1b8bb940ad48bb46a0173558f17, type: 3}
---- !u!1 &8883746073681797372 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 527409583061272801, guid: aaa7c1b8bb940ad48bb46a0173558f17, type: 3}
-  m_PrefabInstance: {fileID: 8883746073681797371}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &8883746073681797378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8883746073681797372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d99b375fe9ffaeb468c4d4d065ec3f6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Rabbit
-  rabbitSO: {fileID: 11400000, guid: 081b5208fc847354e8cdef2157a23879, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

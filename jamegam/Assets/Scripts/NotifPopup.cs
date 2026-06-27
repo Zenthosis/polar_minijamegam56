@@ -13,15 +13,14 @@ public class NotifPopup : MonoBehaviour
     private ObjectPool<NotifPopup> pool;
     private Vector3 startPosition;
 
-    public void Init(ObjectPool<NotifPopup> pool, string message)
+    public void Init(ObjectPool<NotifPopup> pool, string message, Vector3 startPos)
     {
+        transform.position = startPos;
+        startPosition = startPos;
+
         this.pool = pool;
         label.text = message;
-    }
 
-    private void OnEnable()
-    {
-        startPosition = transform.position;
         canvasGroup.alpha = 1f;
 
         transform.DOMove(startPosition + Vector3.up * floatHeight, duration)

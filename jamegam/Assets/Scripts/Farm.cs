@@ -7,6 +7,8 @@ public class Farm : MonoBehaviour, IPointerClickHandler
     [SerializeField] private float clickAmount = 0.1f;
     [SerializeField] private GameObject notifPrefab;
 
+    [SerializeField] private float randomXRangeForPopups;
+
     private ObjectPool<NotifPopup> notifPrefabPool;
 
     private void Awake()
@@ -43,13 +45,20 @@ public class Farm : MonoBehaviour, IPointerClickHandler
 
     private void SpawnPopUp(float amount)
     {
+        Vector3 spawnPoint = transform.position;
+        spawnPoint.x += Random.Range(- randomXRangeForPopups, + randomXRangeForPopups);
+
         NotifPopup popup = notifPrefabPool.Get();
-        popup.Init(notifPrefabPool, $"+ {amount}");
-        popup.transform.position = transform.position;
+        popup.Init(notifPrefabPool, $"+ {amount}", spawnPoint);
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         FarmCarrots(clickAmount);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position - Vector3.right * randomXRangeForPopups, transform.position + Vector3.right * randomXRangeForPopups);
     }
 }
