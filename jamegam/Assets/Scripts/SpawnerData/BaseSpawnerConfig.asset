@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ce547df2dfb0149b7514ec0d65ba92, type: 3}
+  m_Name: BaseSpawnerConfig
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnerConfigSO
+  initialBudget: 2
+  rabbitOptionsAndCost:
+    _serializedList:
+    - Key: {fileID: 527409583061272801, guid: aaa7c1b8bb940ad48bb46a0173558f17, type: 3}
+      Value: 1
+    - Key: {fileID: 527409583061272801, guid: 635c0c1769924eb4cabb85edf242f7cf, type: 3}
+      Value: 50
+  coolDownCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.5573425
+      value: 16.687485
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 35.717903
+      value: 11.955032
+      inSlope: -0.10249498
+      outSlope: -0.10249498
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 50.61375
+      value: 1.1289803
+      inSlope: -0.44825125
+      outSlope: -0.44825125
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.32466525
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  budgetCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.37907618
+      outSlope: 0.37907618
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 14.012891
+      value: 6.311953
+      inSlope: 0.5049717
+      outSlope: 0.5049717
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.23284923
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 29.875
+      value: 15.566667
+      inSlope: 0.113884635
+      outSlope: 0.113884635
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.6579806
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

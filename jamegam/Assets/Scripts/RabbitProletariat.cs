@@ -35,7 +35,7 @@ public class RabbitProletariat : MonoBehaviour
     {
         if (wall == null) return;
 
-        float distanceToWall = Vector2.Distance(transform.position, wall.transform.position);
+        float distanceToWall = Mathf.Abs(transform.position.x - wall.transform.position.x);
 
         if (distanceToWall > wallAttackRange)
         {
@@ -44,6 +44,7 @@ public class RabbitProletariat : MonoBehaviour
             return;
         }
 
+        //wall reached. time to attack.
         if (Time.time >= lastAttackTime + attackInterval)
         {
             rabbit.ChangeState(RabbitState.Attacking);
@@ -52,7 +53,7 @@ public class RabbitProletariat : MonoBehaviour
         }
         else
         {
-            //rabbit.ChangeState(RabbitState.Idle);
+            rabbit.ChangeState(RabbitState.Idle);
         }
     }
 

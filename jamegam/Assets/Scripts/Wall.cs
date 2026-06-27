@@ -20,7 +20,7 @@ public class Wall : MonoBehaviour
     {
         currentHealth -= damage;
         TakeHitVisuals();
-        print($"Took {damage} damage!");
+        //print($"Took {damage} damage!");
 
         if(currentHealth <= 0)
         {

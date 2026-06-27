@@ -4,7 +4,7 @@ using UnityEngine;
 public class RabbitSubject : MonoBehaviour
 {
     [Header("Patrol")]
-    [SerializeField] private Transform targetArea;
+    private Transform targetArea;
     [SerializeField] private float patrolRange = 3f;
     [SerializeField] private float minIdleTime = 1f;
     [SerializeField] private float maxIdleTime = 3f;
@@ -26,6 +26,10 @@ public class RabbitSubject : MonoBehaviour
         colliders = GetComponentsInChildren<Collider2D>();
         foreach (var col in colliders)
             col.enabled = false;
+
+        targetArea = rabbit.farmLocation;
+        print("target area: " + targetArea);
+        print("farmLocation area: " + rabbit.farmLocation);
 
         StartCoroutine(MoveToTargetThenPatrol());
     }
