@@ -70,6 +70,7 @@ public class RabbitProletariat : MonoBehaviour
         GetComponentInChildren<SpriteRenderer>().color = Color.green;
 
         onRabbitConverted?.Invoke(this);
+        rabbit.SwitchSide();
 
         if (rabbitSubject != null)
             rabbitSubject.enabled = true;
