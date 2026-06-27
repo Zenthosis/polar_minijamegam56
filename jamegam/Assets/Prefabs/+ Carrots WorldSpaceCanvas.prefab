@@ -225,6 +225,8 @@ GameObject:
   - component: {fileID: 1959131362499999983}
   - component: {fileID: 1169231908507800960}
   - component: {fileID: 5503073525218796946}
+  - component: {fileID: -9155468133029437229}
+  - component: {fileID: 4462762271033866292}
   m_Layer: 5
   m_Name: + Carrots WorldSpaceCanvas
   m_TagString: Untagged
@@ -315,3 +317,31 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &-9155468133029437229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9124702036833296939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78dab74b14419d847932354827bbdd7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  label: {fileID: 5244587326017668966}
+  canvasGroup: {fileID: 4462762271033866292}
+  floatHeight: 1.5
+  duration: 1.2
+--- !u!225 &4462762271033866292
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9124702036833296939}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

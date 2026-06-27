@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 92305835038770049}
+  - component: {fileID: 9007670408972264349}
   - component: {fileID: 2753997273519298010}
   - component: {fileID: 2967880344297825019}
   - component: {fileID: 6315067262496691801}
@@ -35,6 +36,19 @@ Transform:
   - {fileID: 6911656015901108282}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9007670408972264349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527409583061272801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99b375fe9ffaeb468c4d4d065ec3f6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rabbit
+  rabbitSO: {fileID: 11400000, guid: 081b5208fc847354e8cdef2157a23879, type: 2}
 --- !u!114 &2753997273519298010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,11 +62,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RabbitSubject
   targetArea: {fileID: 0}
-  moveSpeed: 2
-  arrivalThreshold: 0.2
   patrolRange: 3
   minIdleTime: 1
   maxIdleTime: 3
+  arrivalThreshold: 0.2
 --- !u!114 &2967880344297825019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,8 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8325a3434780594c90215491754702b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RabbitProletariat
-  rabbitSO: {fileID: 11400000, guid: 081b5208fc847354e8cdef2157a23879, type: 2}
-  wallAttackableRange: 0.2
+  wallAttackRange: 1.5
   onRabbitConverted:
     m_PersistentCalls:
       m_Calls: []

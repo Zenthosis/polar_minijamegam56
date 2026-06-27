@@ -24,15 +24,6 @@ public class CarrotShooter : MonoBehaviour
 
     public void ShootCarrot(RabbitProletariat target)
     {
-        if (!farm.HasEnoughCarrots(1))
-        {
-            farm.ReduceCarrots(1);
-        }
-        else
-        {
-            return;
-        }
-        
         if (carrotPrefab == null)
         {
             Debug.LogWarning("[CarrotShooter] No carrot prefab assigned!");
@@ -44,6 +35,13 @@ public class CarrotShooter : MonoBehaviour
             Debug.LogWarning("[CarrotShooter] No target provided!");
             return;
         }
+
+        // --- basic checks done
+
+        if (farm.HasEnoughCarrots(1))
+            farm.ReduceCarrots(1);
+        else
+            return;
 
         GameObject carrotGO = Instantiate(carrotPrefab, transform.position + Vector3.up, Quaternion.identity);
         CarrotProjectile carrot = carrotGO.GetComponent<CarrotProjectile>();
