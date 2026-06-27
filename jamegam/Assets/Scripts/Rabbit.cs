@@ -14,17 +14,25 @@ public class Rabbit : MonoBehaviour
 
     private void Start()
     {
-        myAnimator = GetComponent<Animator>();
+        myAnimator = GetComponentInChildren<Animator>();
     }
 
     public void ChangeState(RabbitState newState)
-    {
+    {  
         if (CurrentState == newState) return;
         CurrentState = newState;
-
-        myAnimator.SetBool("IsAttacking", CurrentState == RabbitState.Attacking);
-        myAnimator.SetBool("IsAttacking", CurrentState == RabbitState.Idle);
-        myAnimator.SetBool("IsConverted", CurrentState == RabbitState.Converted);
+        Debug.Log($"{gameObject.name} changed state to: {CurrentState}");
+        if (CurrentState != RabbitState.Converted)
+        {
+            myAnimator.SetBool("IsAttacking", CurrentState == RabbitState.Attacking);
+            //myAnimator.SetBool("IsAttacking", CurrentState == RabbitState.Idle);
+        }
+        else 
+        
+        {
+            myAnimator.SetBool("IsAttacking", false);
+            myAnimator.SetBool("IsConverted", true);
+        }
     }
 
     public void MoveInDirection(Vector2 direction)

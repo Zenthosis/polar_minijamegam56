@@ -52,7 +52,7 @@ public class RabbitProletariat : MonoBehaviour
         }
         else
         {
-            rabbit.ChangeState(RabbitState.Idle);
+            //rabbit.ChangeState(RabbitState.Idle);
         }
     }
 
@@ -71,6 +71,7 @@ public class RabbitProletariat : MonoBehaviour
 
         onRabbitConverted?.Invoke(this);
         rabbit.SwitchSide();
+        rabbit.ChangeState(RabbitState.Converted);
 
         if (rabbitSubject != null)
             rabbitSubject.enabled = true;
