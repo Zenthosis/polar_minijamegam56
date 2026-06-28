@@ -39,6 +39,7 @@ public class Farm : MonoBehaviour, IPointerClickHandler
 
     public void Upgrade()
     {
+        ReduceCarrots(UpgradeCost);
         UpgradeCost += upgradeCostIncrease;
         MaxBunnies += 1;
     }

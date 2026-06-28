@@ -83,7 +83,6 @@ public class RabbitSubject : MonoBehaviour
             }
         }
 
-        farm.AddRabbit();
         StartCoroutine(AutoFarm());
 
         // Phase 2: Patrol

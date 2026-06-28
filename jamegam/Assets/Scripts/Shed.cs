@@ -13,7 +13,6 @@ public class Shed : MonoBehaviour
         farm = FindAnyObjectByType<Farm>();
     }
 
-    // Shed.cs
     private void Update()
     {
         if (subjects.Count == 0) return;
@@ -21,6 +20,8 @@ public class Shed : MonoBehaviour
 
         RabbitSubject subject = subjects[subjects.Count - 1];
         subjects.RemoveAt(subjects.Count - 1);
+
+        farm.AddRabbit(); // increment immediately, not inside the coroutine
         subject.StartFarming();
     }
 
