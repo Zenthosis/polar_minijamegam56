@@ -1,69 +1,85 @@
 using UnityEngine;
 
-/// <summary>
-/// Automatically fires at the nearest RabbitProletariat on a set interval.
-/// Attach alongside CarrotShooter on the same GameObject.
-/// </summary>
+using UnityEngine;
+
 [RequireComponent(typeof(CarrotShooter))]
 public class AutoCarrotShooter : MonoBehaviour
 {
-    [SerializeField] private float fireInterval = 2f;
+    [Header("Interval Increase")]
+    [SerializeField] private float fireRate = 0.5f;          // shots per second
+    [SerializeField] private float fireRateIncrease = 0.1f;
+    [SerializeField] private float fireRateUpgradeCost = 5f;
+    [SerializeField] private float fireRateUpgradeCostIncrease = 5f;
 
-    private CarrotShooter _carrotShooter;
-    private float _timer;
+    [Header("Damage Increase")]
+    [SerializeField] private float damageUpgradeCost = 5f;
+    [SerializeField] private float damageUpgradeCostIncrease = 5f;
+    [SerializeField] private float damageIncrease = 5f;
+
+    private CarrotShooter carrotShooter;
+    private Farm farm;
+    private float timer;
+
+    public float FireRate => fireRate;
+    public float FireRateUpgradeCost => fireRateUpgradeCost;
+    public float DamageUpgradeCost => damageUpgradeCost;
+    public float CurrentDamage => carrotShooter.CurrentDamage;
 
     private void Start()
     {
-        _carrotShooter = GetComponent<CarrotShooter>();
-        _timer = fireInterval; // fire immediately on first interval
+        carrotShooter = GetComponent<CarrotShooter>();
+        farm = FindAnyObjectByType<Farm>();
+        timer = 1f / fireRate; // fire after first full interval
     }
 
-    //private void Update()
-    //{
-    //    _timer += Time.deltaTime;
+    private void Update()
+    {
+        timer += Time.deltaTime;
 
-    //    if (_timer >= fireInterval)
-    //    {
-    //        _timer = 0f;
-    //        bool hit = _carrotShooter.FindAndShootClosestRabbit();
+        if (timer >= 1f / fireRate)
+        {
+            timer = 0f;
+            FindAndShootClosestRabbit();
+        }
+    }
 
-    //        if (!hit)
-    //            Debug.Log("[AutoCarrotShooter] No rabbit in range to shoot at.");
-    //    }
-    //}
+    public void UpgradeFireRate()
+    {
+        if (!farm.HasEnoughCarrots(fireRateUpgradeCost)) return;
+        farm.ReduceCarrots(fireRateUpgradeCost);
+        fireRate += fireRateIncrease;
+        fireRateUpgradeCost += fireRateUpgradeCostIncrease;
+    }
 
+    private void FindAndShootClosestRabbit()
+    {
+        RabbitProletariat[] rabbits = FindObjectsByType<RabbitProletariat>(FindObjectsSortMode.None);
 
-    ///// <summary>
-    ///// Finds the closest RabbitProletariat within detectionRadius and shoots at it.
-    ///// Returns true if a target was found and shot at.
-    ///// </summary>
-    //public bool FindAndShootClosestRabbit()
-    //{
-    //    Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, detectionRadius, rabbitLayer);
+        if (rabbits.Length == 0) return;
 
-    //    if (hits.Length == 0)
-    //        return false;
+        RabbitProletariat nearest = null;
+        float nearestX = float.MaxValue;
 
-    //    RabbitProletariat closestRabbit = null;
-    //    float closestDistance = float.MaxValue;
+        foreach (var rabbit in rabbits)
+        {
+            float distX = Mathf.Abs(rabbit.transform.position.x - transform.position.x);
+            if (distX < nearestX)
+            {
+                nearestX = distX;
+                nearest = rabbit;
+            }
+        }
 
-    //    foreach (var hit in hits)
-    //    {
-    //        RabbitProletariat rabbit = hit.GetComponent<RabbitProletariat>();
-    //        if (rabbit == null || !rabbit.enabled) continue;
+        if (nearest != null)
+            carrotShooter.ShootCarrotFree(nearest);
+    }
 
-    //        float dist = Vector2.Distance(transform.position, hit.transform.position);
-    //        if (dist < closestDistance)
-    //        {
-    //            closestDistance = dist;
-    //            closestRabbit = rabbit;
-    //        }
-    //    }
-
-    //    if (closestRabbit == null)
-    //        return false;
-
-    //    ShootCarrot(closestRabbit.transform);
-    //    return true;
-    //}
+    public void UpgradeDamage()
+    {
+        if (!farm.HasEnoughCarrots(damageUpgradeCost)) return;
+        farm.ReduceCarrots(damageUpgradeCost);
+        carrotShooter.SetDamage(carrotShooter.CurrentDamage + damageIncrease);
+        print("iNCREASED DAMAGE");
+        damageUpgradeCost += damageUpgradeCostIncrease;
+    }
 }
