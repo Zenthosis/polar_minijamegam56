@@ -3301,6 +3301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CarrotPurchase - autoShooter
       objectReference: {fileID: 0}
+    - target: {fileID: 2554549859724666702, guid: 43a6c18dfc2bc1a418c6df6689c776e1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6819615018997927888, guid: 43a6c18dfc2bc1a418c6df6689c776e1, type: 3}
       propertyPath: farm
       value: 

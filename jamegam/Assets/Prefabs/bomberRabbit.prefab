@@ -243,11 +243,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -27559111
-      Data2: 1247251126
-      Data3: 544620424
-      Data4: -1264769617
-    Path: event:/BunnyBomberDie
+      Data1: -1163473408
+      Data2: 1182155706
+      Data3: -135334765
+      Data4: -218578598
+    Path: event:/BunnyDieAndFarm
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -256,8 +256,8 @@ MonoBehaviour:
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 1.5
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
   OverrideMaxDistance: 20
 --- !u!1 &4480043007202664634
 GameObject:
