@@ -106,6 +106,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 477
+--- !u!114 &-2570089100059440693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BunnyBomberDie
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/BunnyBomberDie
+  Guid:
+    Data1: -27559111
+    Data2: 1247251126
+    Data3: 544620424
+    Data4: -1264769617
+  Banks:
+  - {fileID: 8699466614807517922}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7500
 --- !u!114 &-725330115082800736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,10 +202,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639182451818102661
+  lastModified: 639182463401791325
   FileSizes:
   - Name: 
-    Value: 1320
+    Value: 1360
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -206,13 +233,14 @@ MonoBehaviour:
   - {fileID: 1487496220310642252}
   - {fileID: 6176849384964606399}
   - {fileID: 4257353581638949438}
+  - {fileID: -2570089100059440693}
   EditorParameters:
   - {fileID: 5386385845215893895}
   MasterBanks:
   - {fileID: 8699466614807517922}
   StringsBanks:
   - {fileID: -33538280192012074}
-  cacheTime: 639182451818102661
+  cacheTime: 639182463401791325
   cacheVersion: 131637
 --- !u!114 &331213171766079050
 MonoBehaviour:
@@ -282,14 +310,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: event:/BunnyDieAndFarm
   Guid:
-    Data1: -1628073744
-    Data2: 1114934214
-    Data3: 77696410
-    Data4: 1244640230
+    Data1: -1163473408
+    Data2: 1182155706
+    Data3: -135334765
+    Data4: -218578598
   Banks:
   - {fileID: 8699466614807517922}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -388,6 +416,6 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639182451818053124
+  lastModified: 639182463401754865
   FileSizes: []
   Exists: 1

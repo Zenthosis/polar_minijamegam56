@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2753997273519298010}
   - component: {fileID: 2967880344297825019}
   - component: {fileID: 6315067262496691801}
+  - component: {fileID: 7220982200052286396}
   m_Layer: 6
   m_Name: ExpensiveRabbit
   m_TagString: Untagged
@@ -48,6 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d99b375fe9ffaeb468c4d4d065ec3f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rabbit
+  moveSpeedBun: 0
+  moveSpeedBase: 0
   rabbitSO: {fileID: 11400000, guid: 1acc53ad5da710b42b9cb72894fb22db, type: 2}
 --- !u!114 &2753997273519298010
 MonoBehaviour:
@@ -80,7 +83,19 @@ MonoBehaviour:
   wallAttackRange: 1.5
   onRabbitConverted:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7220982200052286396}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!58 &6315067262496691801
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -117,6 +132,37 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &7220982200052286396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527409583061272801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1163473408
+      Data2: 1182155706
+      Data3: -135334765
+      Data4: -218578598
+    Path: event:/BunnyDieAndFarm
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1.5
+  OverrideMaxDistance: 20
 --- !u!1 &4480043007202664634
 GameObject:
   m_ObjectHideFlags: 0
