@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RabbitSO
   rabbitData:
     rabbitName: Normal
-    maxHealth: 20
+    maxHealth: 30
     damage: 0.5
     attacksPerSecond: 5
     moveSpeed: 4
