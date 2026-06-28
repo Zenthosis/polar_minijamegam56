@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4beb5828a8a2a0a4890c7a328179c1e8
+guid: e86af97af7e24d44fba51f85840f1e23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4342869934098108864
-    second: tower_front_0
+      213: -8472406301039945205
+    second: auto_shooter_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tower_front_0
+      name: auto_shooter_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 382
-        height: 567
+        width: 112
+        height: 169
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04eab50fdc60bb3c0800000000000000
-      internalID: -4342869934098108864
+      spriteID: b0a9bb1ab57fb6a80800000000000000
+      internalID: -8472406301039945205
       vertices: []
       indices: 
       edges: []
@@ -138,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4b136f8ddedd23249beeda12b0b7f711
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tower_front_0: -4342869934098108864
+      auto_shooter_0: -8472406301039945205
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
