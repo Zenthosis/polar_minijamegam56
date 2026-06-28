@@ -54,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Rabbit
   moveSpeedBun: 0
   moveSpeedBase: 0
-  rabbitSO: {fileID: 11400000, guid: 081b5208fc847354e8cdef2157a23879, type: 2}
+  rabbitSO: {fileID: 11400000, guid: bf6295b5ee027db4e82eda1fb8b1bd6a, type: 2}
 --- !u!114 &2753997273519298010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ Animator:
   m_GameObject: {fileID: 527409583061272801}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e751f1ddb38b9240a80510fe0b25ab1, type: 2}
+  m_Controller: {fileID: 9100000, guid: a69c04b0647c29e409da2e8f21a838f1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
