@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RabbitSO
   rabbitData:
     rabbitName: Normal
-    maxHealth: 100
+    maxHealth: 120
     damage: 10
     attacksPerSecond: 0.1
-    moveSpeed: 0.5
+    moveSpeed: 0.3
     patrolRange: 3
     idleTimeBetweenPatrols: 0.2
     carrotGainPerYield: 0
