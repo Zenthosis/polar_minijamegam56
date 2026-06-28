@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 using UnityEngine;
@@ -53,7 +54,9 @@ public class AutoCarrotShooter : MonoBehaviour
 
     private void FindAndShootClosestRabbit()
     {
-        RabbitProletariat[] rabbits = FindObjectsByType<RabbitProletariat>(FindObjectsSortMode.None);
+        RabbitProletariat[] rabbits = FindObjectsByType<RabbitProletariat>(FindObjectsSortMode.None)
+            .Where(r => r.enabled)
+            .ToArray();
 
         if (rabbits.Length == 0) return;
 
