@@ -37,7 +37,8 @@ public class CarrotProjectile : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    {
+    {   
+        Debug.Log($"collision happened");
         RabbitProletariat rabbit = collision.gameObject.GetComponent<RabbitProletariat>();
         if (rabbit != null && rabbit.enabled) 
             rabbit.FeedCarrot(10f);

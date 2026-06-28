@@ -1,8 +1,6 @@
 using System.Linq;
 using UnityEngine;
 
-using UnityEngine;
-
 [RequireComponent(typeof(CarrotShooter))]
 public class AutoCarrotShooter : MonoBehaviour
 {

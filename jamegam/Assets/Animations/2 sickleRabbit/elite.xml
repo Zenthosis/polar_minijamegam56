@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="elite.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="elite_attack0000" x="2" y="2" width="118" height="139" frameX="-3" frameY="0" frameWidth="123" frameHeight="139"/>
+	<SubTexture name="elite_attack0001" x="122" y="2" width="123" height="134" frameX="0" frameY="-4" frameWidth="123" frameHeight="139"/>
+	<SubTexture name="elite_attack0002" x="247" y="2" width="120" height="136" frameX="-1" frameY="-2" frameWidth="123" frameHeight="139"/>
+	<SubTexture name="elite_attack0003" x="247" y="2" width="120" height="136" frameX="-1" frameY="-2" frameWidth="123" frameHeight="139"/>
+	<SubTexture name="elite_walk0000" x="369" y="2" width="104" height="126" frameX="0" frameY="-3" frameWidth="107" frameHeight="131"/>
+	<SubTexture name="elite_walk0001" x="2" y="143" width="97" height="131" frameX="-4" frameY="0" frameWidth="107" frameHeight="131"/>
+	<SubTexture name="elite_walk0002" x="101" y="143" width="93" height="127" frameX="-7" frameY="-2" frameWidth="107" frameHeight="131"/>
+	<SubTexture name="elite_walk0003" x="196" y="143" width="95" height="123" frameX="-7" frameY="-6" frameWidth="107" frameHeight="131"/>
+	<SubTexture name="elite_walk0004" x="293" y="143" width="99" height="112" frameX="-7" frameY="-17" frameWidth="107" frameHeight="131"/>
+	<SubTexture name="elite_walk0005" x="394" y="143" width="99" height="116" frameX="-6" frameY="-12" frameWidth="107" frameHeight="131"/>
+	<SubTexture name="elite_walk0006" x="2" y="276" width="89" height="119" frameX="-10" frameY="-10" frameWidth="107" frameHeight="131"/>
+	<SubTexture name="elite_walk0007" x="93" y="276" width="89" height="119" frameX="-10" frameY="-10" frameWidth="107" frameHeight="131"/>
+	<SubTexture name="elite_walk0008" x="184" y="276" width="90" height="120" frameX="-16" frameY="-8" frameWidth="107" frameHeight="131"/>
+	<SubTexture name="elite_walk0009" x="276" y="276" width="91" height="123" frameX="-16" frameY="-5" frameWidth="107" frameHeight="131"/>
+	<SubTexture name="elite_walk0010" x="369" y="276" width="89" height="123" frameX="-14" frameY="-5" frameWidth="107" frameHeight="131"/>
+</TextureAtlas>
