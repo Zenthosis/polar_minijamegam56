@@ -3374,6 +3374,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6819615018997927888, guid: 43a6c18dfc2bc1a418c6df6689c776e1, type: 3}
+      propertyPath: cost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819615018997927888, guid: 43a6c18dfc2bc1a418c6df6689c776e1, type: 3}
       propertyPath: farm
       value: 
       objectReference: {fileID: 1657453828}
