@@ -175,10 +175,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639182570668359215
+  lastModified: 639182419454321766
   FileSizes:
   - Name: 
-    Value: 1172
+    Value: 1270
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -203,13 +203,15 @@ MonoBehaviour:
   - {fileID: -4174582946797259910}
   - {fileID: -725330115082800736}
   - {fileID: -557347935669813670}
+  - {fileID: 1487496220310642252}
+  - {fileID: 6176849384964606399}
   EditorParameters:
   - {fileID: 5386385845215893895}
   MasterBanks:
   - {fileID: 8699466614807517922}
   StringsBanks:
   - {fileID: -33538280192012074}
-  cacheTime: 639182570668359215
+  cacheTime: 639182419454321766
   cacheVersion: 131637
 --- !u!114 &331213171766079050
 MonoBehaviour:
@@ -238,6 +240,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1375
+--- !u!114 &1487496220310642252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BunnyDie
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/BunnyDie
+  Guid:
+    Data1: 1766777645
+    Data2: 1199877911
+    Data3: 981282964
+    Data4: 1267659913
+  Banks:
+  - {fileID: 8699466614807517922}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
 --- !u!114 &5386385845215893895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +291,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &6176849384964606399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BunnyFarmer
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/BunnyFarmer
+  Guid:
+    Data1: -844709482
+    Data2: 1307273275
+    Data3: 2041312392
+    Data4: 401358113
+  Banks:
+  - {fileID: 8699466614807517922}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4500
 --- !u!114 &8338205186662833686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +360,6 @@ MonoBehaviour:
   Path: Assets/FMOD/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639182570668329087
+  lastModified: 639182419454257689
   FileSizes: []
   Exists: 1
