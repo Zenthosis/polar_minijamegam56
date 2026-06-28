@@ -12,33 +12,29 @@ public class RabbitSubject : MonoBehaviour
 
     private Rabbit rabbit;
     private Collider2D[] colliders;
-    private Animator myAnimator;////////////////
-
+    private Animator myAnimator;
+    private Shed shed;
     private Farm farm;
 
-    private void Start()
-    {
-        myAnimator = GetComponentInChildren<Animator>();//////////
-    }
+    private SpriteRenderer spriteRenderer;
+    private bool isInShed = false;
 
     private void Awake()
     {
         rabbit = GetComponent<Rabbit>();
+        myAnimator = GetComponentInChildren<Animator>();
+        shed = FindAnyObjectByType<Shed>();
+        farm = FindAnyObjectByType<Farm>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void OnEnable()
     {
-        farm = FindAnyObjectByType<Farm>();
-
         colliders = GetComponentsInChildren<Collider2D>();
         foreach (var col in colliders)
             col.enabled = false;
 
-        targetArea = rabbit.farmLocation;
-        print("target area: " + targetArea);
-        print("farmLocation area: " + rabbit.farmLocation);
-
-        StartCoroutine(MoveToTargetThenPatrol());
+        StartCoroutine(MoveToShedThenDisable());
     }
 
     private void OnDisable()
@@ -46,26 +42,56 @@ public class RabbitSubject : MonoBehaviour
         StopAllCoroutines();
     }
 
-    private IEnumerator MoveToTargetThenPatrol()
+    // Called by Shed when a farm spot is available
+    public void StartFarming()
     {
-        // Phase 1: Move to target area
+        targetArea = rabbit.farmLocation;
+        spriteRenderer.enabled = true;
+        isInShed = false;
+        StartCoroutine(FarmingRoutine());
+    }
+
+    private IEnumerator MoveToShedThenDisable()
+    {
+        rabbit.ChangeState(RabbitState.Moving);
+
+        Transform shedTransform = shed.transform;
+        while (Vector2.Distance(transform.position, shedTransform.position) > arrivalThreshold)
+        {
+            rabbit.MoveInDirection((shedTransform.position - transform.position).normalized);
+            yield return null;
+        }
+
+        rabbit.ChangeState(RabbitState.Idle);
+        shed.Add(this);
+        spriteRenderer.enabled = false;
+        isInShed = true;
+    }
+
+
+
+    private IEnumerator FarmingRoutine()
+    {
         if (targetArea != null)
         {
             rabbit.ChangeState(RabbitState.Moving);
-
             while (Vector2.Distance(transform.position, targetArea.position) > arrivalThreshold)
             {
+                if (isInShed) yield break; // safety exit
                 rabbit.MoveInDirection((targetArea.position - transform.position).normalized);
                 yield return null;
             }
         }
 
+        farm.AddRabbit();
         StartCoroutine(AutoFarm());
 
         // Phase 2: Patrol
         while (true)
         {
-            myAnimator.SetBool("IsFarming",true);/////////////////////////////////
+            if (isInShed) yield break; // safety exit
+            myAnimator.SetBool("IsFarming", true);
+
             float baseX = targetArea != null ? targetArea.position.x : transform.position.x;
             float destX = baseX + Random.Range(-patrolRange, patrolRange);
             Vector2 destination = new Vector2(destX, transform.position.y);
@@ -85,7 +111,7 @@ public class RabbitSubject : MonoBehaviour
 
     private IEnumerator AutoFarm()
     {
-        while(true)
+        while (true)
         {
             farm.FarmCarrots(rabbit.Data.carrotGainPerYield);
             yield return new WaitForSeconds(rabbit.Data.yieldIntervals);

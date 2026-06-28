@@ -13,7 +13,12 @@ public class Farm : MonoBehaviour, IPointerClickHandler
     // 1 carrot unit is = 0.1 carrots. gotta do this because floating point imprecision.
 
     public float CurrentCarrotAmount => carrotUnits / 10f;
+    public int RabbitCount { get; private set;  }
+    public int MaxBunnies { get; private set; } = 1;
+    public float UpgradeCost { get; private set; } = 5;
+    public bool CanBeUpgraded => CurrentCarrotAmount >= UpgradeCost;
 
+    private float upgradeCostIncrease = 5; //temporary
     private void Awake()
     {
         notifPrefabPool = new ObjectPool<NotifPopup>(
@@ -25,6 +30,17 @@ public class Farm : MonoBehaviour, IPointerClickHandler
             defaultCapacity: 10,
             maxSize: 20
         );
+    }
+
+    public void AddRabbit()
+    {
+        RabbitCount++;
+    }
+
+    public void Upgrade()
+    {
+        UpgradeCost += upgradeCostIncrease;
+        MaxBunnies += 1;
     }
 
     public bool HasEnoughCarrots(float amount)
