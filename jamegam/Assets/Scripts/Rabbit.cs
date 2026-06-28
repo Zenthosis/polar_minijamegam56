@@ -5,17 +5,21 @@ public enum RabbitState { Idle, Moving, Attacking, Converted }
 
 public class Rabbit : MonoBehaviour
 {
+    [SerializeField] public float moveSpeedBun; //////////////////////
+    [SerializeField] protected float moveSpeedBase; /////////////////////
     [SerializeField] protected RabbitSO rabbitSO;
 
     public RabbitData Data => rabbitSO.rabbitData;
     public RabbitState CurrentState { get; private set; }
     public event Action OnSwitchSide;
-    Animator myAnimator;
+    private Animator myAnimator;
     public Transform farmLocation { get; private set; }
 
     private void Start()
     {
         myAnimator = GetComponentInChildren<Animator>();
+        moveSpeedBase = Data.moveSpeed;/////////////////
+        moveSpeedBun = moveSpeedBase;///////////////
     }
 
     public void Init(Transform farmLocation)
@@ -37,12 +41,13 @@ public class Rabbit : MonoBehaviour
         {
             myAnimator.SetBool("IsAttacking", false);
             myAnimator.SetBool("IsConverted", true);
+            
         }
     }
 
     public void MoveInDirection(Vector2 direction)
     {
-        transform.position += (Vector3)(direction.normalized * Data.moveSpeed * Time.deltaTime);
+        transform.position += (Vector3)(direction.normalized * moveSpeedBun * Time.deltaTime);
     }
 
     public void SwitchSide()

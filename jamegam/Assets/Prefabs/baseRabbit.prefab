@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9007670408972264349}
   - component: {fileID: 2753997273519298010}
   - component: {fileID: 2967880344297825019}
+  - component: {fileID: 5756208469711386073}
   - component: {fileID: 6315067262496691801}
   - component: {fileID: 151996665690476232}
   - component: {fileID: 3608479764570599577}
@@ -50,6 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d99b375fe9ffaeb468c4d4d065ec3f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Rabbit
+  moveSpeedBun: 0
+  moveSpeedBase: 0
   rabbitSO: {fileID: 11400000, guid: 081b5208fc847354e8cdef2157a23879, type: 2}
 --- !u!114 &2753997273519298010
 MonoBehaviour:
@@ -83,6 +86,18 @@ MonoBehaviour:
   onRabbitConverted:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5756208469711386073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527409583061272801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bac15181b111e44bb40fb229f6d345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RabbitAnimEffects
 --- !u!58 &6315067262496691801
 CircleCollider2D:
   m_ObjectHideFlags: 0
