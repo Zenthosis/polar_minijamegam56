@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 151996665690476232}
   - component: {fileID: 3608479764570599577}
   - component: {fileID: 2381398086280911896}
-  - component: {fileID: -3907795722016319917}
   m_Layer: 6
   m_Name: baseRabbit
   m_TagString: Untagged
@@ -244,42 +243,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1766777645
-      Data2: 1199877911
-      Data3: 981282964
-      Data4: 1267659913
-    Path: event:/BunnyDie
-  Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
---- !u!114 &-3907795722016319917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527409583061272801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -844709482
-      Data2: 1307273275
-      Data3: 2041312392
-      Data4: 401358113
-    Path: event:/BunnyFarmer
+      Data1: -1628073744
+      Data2: 1114934214
+      Data3: 77696410
+      Data4: 1244640230
+    Path: event:/BunnyDieAndFarm
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
