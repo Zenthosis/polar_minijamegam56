@@ -6,11 +6,17 @@ public class Wall : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private SpriteRenderer visuals;
+    [SerializeField] private float healAmount = 20f;
+    [SerializeField] private float healCost = 5f;
+    [SerializeField] private float costIncreaseAfterHeal = 2f;
 
     public event Action OnWallBroken;
 
     public float MaxHealth => maxHealth;
+    public float HealCost => healCost;
+    public float HealAmount => healAmount;
     public float currentHealth { get; private set; }
+
     private void Awake()
     {
         currentHealth = maxHealth;
@@ -20,12 +26,20 @@ public class Wall : MonoBehaviour
     {
         currentHealth -= damage;
         TakeHitVisuals();
-        //print($"Took {damage} damage!");
 
-        if(currentHealth <= 0)
-        {
+        if (currentHealth <= 0)
             OnWallBroken?.Invoke();
-        }
+    }
+
+    public void Heal(Farm farm)
+    {
+        print("Heal raeched!");
+        if (!farm.HasEnoughCarrots(healCost)) return;
+
+        print("Heal!");
+        farm.ReduceCarrots(healCost);
+        currentHealth = Mathf.Min(currentHealth + healAmount, maxHealth);
+        healCost += costIncreaseAfterHeal;
     }
 
     private void TakeHitVisuals()
