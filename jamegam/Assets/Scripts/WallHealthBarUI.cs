@@ -8,6 +8,9 @@ public class WallHealthBarUI : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private Image fillImage;
 
+    [SerializeField] private Color fullHealthColor;
+    [SerializeField] private Color emptyHealthColor;
+
     private float lastHealth;
 
     private void Start()
@@ -19,7 +22,7 @@ public class WallHealthBarUI : MonoBehaviour
     {
         float healthPercent = wall.currentHealth / wall.MaxHealth;
         slider.value = healthPercent;
-        fillImage.color = Color.Lerp(Color.red, Color.green, healthPercent);
+        fillImage.color = Color.Lerp(emptyHealthColor, fullHealthColor, healthPercent);
 
         if (wall.currentHealth != lastHealth)
         {
