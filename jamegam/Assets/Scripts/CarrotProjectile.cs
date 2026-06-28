@@ -4,6 +4,7 @@ public class CarrotProjectile : MonoBehaviour
 {
     private RabbitProletariat target;
     [SerializeField] private float rotationSpeed;
+    [SerializeField] private float rangeForContactSquared = 0.2f;
 
     public void TrackTarget(RabbitProletariat target, CarrotDetails details)
     {
@@ -20,6 +21,16 @@ public class CarrotProjectile : MonoBehaviour
                 Quaternion.LookRotation(Vector3.forward, direction),
                 rotationSpeed * Time.deltaTime
             );
+
+            if (direction.sqrMagnitude <= rangeForContactSquared)
+            {
+                target.FeedCarrot(10f);
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            Destroy(gameObject);
         }
 
         transform.position += transform.up * 10f * Time.deltaTime;
