@@ -54,7 +54,7 @@ public class Farm : MonoBehaviour, IPointerClickHandler
 
     public bool HasEnoughCarrots(float amount)
     {
-        print($"Checking: {amount} vs my amount: {CurrentCarrotAmount}");
+        //print($"Checking: {amount} vs my amount: {CurrentCarrotAmount}");
         return CurrentCarrotAmount >= amount;
     }
 
