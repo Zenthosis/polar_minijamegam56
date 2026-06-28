@@ -70,6 +70,7 @@ public class Farm : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        print("clickled");
         FarmCarrots(clickAmount);
     }
 
