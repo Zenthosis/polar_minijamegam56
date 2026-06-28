@@ -52,5 +52,36 @@ public class CarrotShooter : MonoBehaviour
             Debug.LogWarning("[CarrotShooter] Instantiated carrot prefab is missing a Carrot component!");
     }
 
+    //copy pasted. dirty but no time.
+    public void ShootCarrotFree(RabbitProletariat target)
+    {
+        if (carrotPrefab == null)
+        {
+            Debug.LogWarning("[CarrotShooter] No carrot prefab assigned!");
+            return;
+        }
+
+        if (target == null)
+        {
+            Debug.LogWarning("[CarrotShooter] No target provided!");
+            return;
+        }
+
+        // --- basic checks done
+        GameObject carrotGO = Instantiate(carrotPrefab, transform.position + Vector3.up, Quaternion.identity);
+        CarrotProjectile carrot = carrotGO.GetComponent<CarrotProjectile>();
+
+        if (carrot != null)
+            carrot.TrackTarget(target, carrotDetails);
+        else
+            Debug.LogWarning("[CarrotShooter] Instantiated carrot prefab is missing a Carrot component!");
+    }
+
+    public float CurrentDamage => carrotDetails.damage;
+
+    public void SetDamage(float damage)
+    {
+        carrotDetails.damage = damage;
+    }
 
 }
