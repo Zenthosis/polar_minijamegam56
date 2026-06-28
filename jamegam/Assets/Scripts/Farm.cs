@@ -19,6 +19,9 @@ public class Farm : MonoBehaviour, IPointerClickHandler
     public bool CanBeUpgraded => CurrentCarrotAmount >= UpgradeCost;
 
     private float upgradeCostIncrease = 5; //temporary
+
+    private int upgradeCount = 0;
+    private int upgradesBeforeIncrease = 2;
     private void Awake()
     {
         notifPrefabPool = new ObjectPool<NotifPopup>(
@@ -39,8 +42,13 @@ public class Farm : MonoBehaviour, IPointerClickHandler
 
     public void Upgrade()
     {
+        upgradeCount++;
+        if(upgradeCount % upgradesBeforeIncrease == 0)
+        {
+            UpgradeCost += upgradeCostIncrease;
+        }
+
         ReduceCarrots(UpgradeCost);
-        UpgradeCost += upgradeCostIncrease;
         MaxBunnies += 1;
     }
 
