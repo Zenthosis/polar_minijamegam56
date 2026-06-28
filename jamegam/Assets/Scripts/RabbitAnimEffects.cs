@@ -19,6 +19,11 @@ public class RabbitAnimEffects: MonoBehaviour
         
     }
 
+    public void destroyRabbit()
+    {
+        Destroy(gameObject);
+        
+    }
 
 
 

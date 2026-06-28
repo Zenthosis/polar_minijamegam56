@@ -12,8 +12,15 @@ public class RabbitSubject : MonoBehaviour
 
     private Rabbit rabbit;
     private Collider2D[] colliders;
+    private Animator myAnimator;////////////////
 
     private Farm farm;
+
+    private void Start()
+    {
+        myAnimator = GetComponentInChildren<Animator>();//////////
+    }
+
     private void Awake()
     {
         rabbit = GetComponent<Rabbit>();
@@ -58,6 +65,7 @@ public class RabbitSubject : MonoBehaviour
         // Phase 2: Patrol
         while (true)
         {
+            myAnimator.SetBool("IsFarming",true);/////////////////////////////////
             float baseX = targetArea != null ? targetArea.position.x : transform.position.x;
             float destX = baseX + Random.Range(-patrolRange, patrolRange);
             Vector2 destination = new Vector2(destX, transform.position.y);

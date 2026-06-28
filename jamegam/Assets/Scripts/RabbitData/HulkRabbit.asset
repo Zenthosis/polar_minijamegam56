@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fe291c3bfa45f545a843594b52dd854, type: 3}
-  m_Name: StrongMan
+  m_Name: HulkRabbit
   m_EditorClassIdentifier: Assembly-CSharp::RabbitSO
   rabbitData:
     rabbitName: Normal
-    maxHealth: 50
-    damage: 50
-    attacksPerSecond: 1
-    moveSpeed: 10
+    maxHealth: 100
+    damage: 10
+    attacksPerSecond: 0.1
+    moveSpeed: 0.5
     patrolRange: 3
     idleTimeBetweenPatrols: 0.2
-    conversionThreshold: 1
+    carrotGainPerYield: 0
+    yieldIntervals: 0
